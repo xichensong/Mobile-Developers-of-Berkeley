@@ -105,10 +105,15 @@ if (typeof Button !== 'undefined' && typeof Container !== 'undefined') {
     { featured:'red', slots:{ red:'featured', pink:'left', green:'right' } },
     { featured:'pink', slots:{ pink:'featured', green:'left', red:'right' } }
   ];
-  const slotLayout = {
+  const desktopSlotLayout = {
     featured:{ x:.25, screenY:.48, scale:3.5 },
     left:{ x:.12, screenY:1.20, scale:1.4 },
     right:{ x:.40, screenY:1.20, scale:1.55 }
+  };
+  const mobileSlotLayout = {
+    featured:{ x:.22, screenY:.40, scale:2.15 },
+    left:{ x:.18, screenY:1.16, scale:1.1 },
+    right:{ x:.72, screenY:1.16, scale:1.15 }
   };
 
   const clamp01 = value => Math.min(Math.max(value, 0), 1);
@@ -161,6 +166,7 @@ if (typeof Button !== 'undefined' && typeof Container !== 'undefined') {
     const fallEnd = .22;
     const fallProgress = smooth(progress / fallEnd);
     const { wrapWidth, wrapHeight, wrapScreenTop, bearStarts } = geometry;
+    const slotLayout = window.innerWidth <= 900 ? mobileSlotLayout : desktopSlotLayout;
 
     staticArtwork.forEach(el => { el.style.opacity = String(Math.max(1 - fallProgress * 1.35, 0)); });
     if (heroText) {
