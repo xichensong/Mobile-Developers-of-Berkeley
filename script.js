@@ -166,7 +166,8 @@ if (typeof Button !== 'undefined' && typeof Container !== 'undefined') {
     const fallEnd = .22;
     const fallProgress = smooth(progress / fallEnd);
     const { wrapWidth, wrapHeight, wrapScreenTop, bearStarts } = geometry;
-    const slotLayout = window.innerWidth <= 900 ? mobileSlotLayout : desktopSlotLayout;
+    const isMobileLayout = window.innerWidth <= 900;
+    const slotLayout = isMobileLayout ? mobileSlotLayout : desktopSlotLayout;
 
     staticArtwork.forEach(el => { el.style.opacity = String(Math.max(1 - fallProgress * 1.35, 0)); });
     if (heroText) {
@@ -231,8 +232,11 @@ if (typeof Button !== 'undefined' && typeof Container !== 'undefined') {
       b.el.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale})`;
     });
 
-    letters.forEach(letter => {
-      const x = wrapWidth * (letter.targetX - letter.anchorX) * fallProgress + wrapWidth * .125 * outroProgress;
+    letters.forEach((letter, index) => {
+      const mobileOutroX = [.30, .50, .70][index];
+      const outroTargetX = isMobileLayout ? mobileOutroX : letter.targetX + .125;
+      const activeTargetX = mix(letter.targetX, outroTargetX, outroProgress);
+      const x = wrapWidth * (activeTargetX - letter.anchorX) * fallProgress;
       const startScreenY = wrapScreenTop + wrapHeight * letter.anchorY;
       const finalLetterScreenY = mix(letter.finalScreenY, .94, outroProgress);
       const targetScreenY = window.innerHeight * finalLetterScreenY;
