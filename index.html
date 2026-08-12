@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Developers of Berkeley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@500;600;700;800&family=Patua+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/liquid-glass/glass.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-pill" id="navPill">
+    <a href="index.html" class="nav-logo">
+      <img src="images/mdb_5.png" alt="MDB Logo" width="34" height="34">
+      <span>MDB</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://www.mdb.dev/about" target="_blank" rel="noopener">About</a></li>
+      <li><a href="https://www.mdb.dev/projects" target="_blank" rel="noopener">Projects</a></li>
+      <li><a href="https://www.mdb.dev/training-program" target="_blank" rel="noopener">Training Program</a></li>
+      <li><a href="https://www.mdb.dev/contact" target="_blank" rel="noopener">Contact</a></li>
+      <li><span class="glass-mount" data-glass-button data-text="Apply" data-size="16" data-href="https://www.mdb.dev/apply" data-target="_blank" id="navApplyGlass"></span></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <ul class="nav-links-mobile" id="navLinksMobile">
+    <li><a href="https://www.mdb.dev/about" target="_blank" rel="noopener">About</a></li>
+    <li><a href="https://www.mdb.dev/projects" target="_blank" rel="noopener">Projects</a></li>
+    <li><a href="https://www.mdb.dev/training-program" target="_blank" rel="noopener">Training Program</a></li>
+    <li><a href="https://www.mdb.dev/contact" target="_blank" rel="noopener">Contact</a></li>
+    <li><a href="https://www.mdb.dev/apply" target="_blank" rel="noopener">Apply</a></li>
+  </ul>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-art reveal-right">
+        <div class="hero-logo-wrap">
+          <img src="images/mdb-logo-static.png" alt="Mobile Developers of Berkeley" class="hero-logo-img">
+          <img src="images/mdb-logo-decor.png?v=2" alt="" class="hero-logo-decor" aria-hidden="true">
+          <img src="images/letters/letter-M.png" alt="" class="falling-letter letter-m" data-fall-letter data-anchor-x=".302" data-anchor-y=".336" data-target-x=".72" data-final-screen-y="1.35" data-rotate="-360" data-final-scale="1.28" aria-hidden="true">
+          <img src="images/letters/letter-D.png" alt="" class="falling-letter letter-d" data-fall-letter data-anchor-x=".174" data-anchor-y=".568" data-target-x=".92" data-final-screen-y="1.35" data-rotate="360" data-final-scale="1.28" aria-hidden="true">
+          <img src="images/letters/letter-B.png" alt="" class="falling-letter letter-b" data-fall-letter data-anchor-x=".308" data-anchor-y=".853" data-target-x="1.12" data-final-screen-y="1.35" data-rotate="-360" data-final-scale="1.28" aria-hidden="true">
+
+          <!-- Layered bears assembled from the manually cleaned part PNGs. -->
+          <div class="bear-wrap bear-red-wrap" data-fall data-target-x=".15" data-final-screen-y=".80" data-rotate="360" data-final-scale="1.72">
+            <div class="layered-bear" aria-hidden="true">
+              <img class="bear-part leg-left" src="images/bears/red/leg-left.png" alt="">
+              <img class="bear-part leg-right" src="images/bears/red/leg-left.png" alt="">
+              <img class="bear-part arm-left" src="images/bears/red/arm-left.png" alt="">
+              <img class="bear-part arm-right" src="images/bears/red/arm-right.png" alt="">
+              <img class="bear-part torso" src="images/bears/red/torso-ready.png" alt="">
+              <img class="bear-part head" src="images/bears/red/head-ready.png" alt="">
+            </div>
+          </div>
+          <div class="bear-wrap bear-pink-wrap" data-fall data-target-x=".38" data-final-screen-y=".80" data-rotate="-360" data-final-scale="1.9">
+            <div class="layered-bear" aria-hidden="true">
+              <img class="bear-part leg-left" src="images/bears/pink/leg-left.png" alt="">
+              <img class="bear-part leg-right" src="images/bears/pink/leg-left.png" alt="">
+              <img class="bear-part arm-left" src="images/bears/pink/arm-left.png" alt="">
+              <img class="bear-part arm-right" src="images/bears/pink/arm-right.png" alt="">
+              <img class="bear-part torso" src="images/bears/pink/torso-ready.png" alt="">
+              <img class="bear-part head" src="images/bears/pink/head-ready.png" alt="">
+            </div>
+          </div>
+          <div class="bear-wrap bear-green-wrap" data-fall data-target-x=".62" data-final-screen-y=".52" data-rotate="720" data-final-scale="5.1">
+            <div class="layered-bear" aria-hidden="true">
+              <img class="bear-part leg-left" src="images/bears/green/leg-left.png" alt="">
+              <img class="bear-part leg-right" src="images/bears/green/leg-left.png" alt="">
+              <img class="bear-part arm-left" src="images/bears/green/arm-left.png" alt="">
+              <img class="bear-part arm-right" src="images/bears/green/arm-right.png" alt="">
+              <img class="bear-part torso" src="images/bears/green/torso-ready.png" alt="">
+              <img class="bear-part head" src="images/bears/green/head-ready.png" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="hero-text reveal-up">
+        <h1 class="hero-heading">
+          <span class="block">We are</span>
+          <span class="block typewriter-line"><span id="typewriter"></span><span class="caret">|</span></span>
+        </h1>
+        <p class="hero-sub">MDB is a community of passionate and innovative mobile developers at UC Berkeley!</p>
+        <div class="hero-buttons">
+          <span class="glass-mount" data-glass-button data-text="Apply Now &rarr;" data-size="18" data-tint="0.35" data-href="https://www.mdb.dev/apply" data-target="_blank"></span>
+          <span class="glass-mount" data-glass-button data-text="Contact Us" data-size="18" data-tint="0.12" data-dark-text="true" data-href="https://www.mdb.dev/contact" data-target="_blank"></span>
+          <span class="glass-mount" data-glass-button data-text="Coffee Chats" data-size="18" data-tint="0.12" data-dark-text="true" data-href="https://airtable.com/appq3RmOWy9QA681J/shroO2qfGNFay078x" data-target="_blank"></span>
+        </div>
+      </div>
+      <div class="story-panels" aria-live="polite">
+        <article class="story-panel" data-story-panel="0">
+          <span class="story-kicker">01</span>
+          <h2>Our Purpose</h2>
+          <p>To foster a diverse and welcoming community driven by learning software development and building real-world applications, leaving members with bonds and memories highlighting all aspects of the college experience and lasting beyond the club.</p>
+          <div class="story-purpose-media">
+            <img src="images/mdb8.jpg" alt="MDB community members">
+            <div class="story-stats">
+              <span><strong class="story-stat-number" data-target="20">0</strong>Semesters of Experience</span>
+              <span><strong class="story-stat-number" data-target="30">0</strong>Projects Completed</span>
+              <span><strong class="story-stat-number" data-target="50">0</strong>Active Members</span>
+            </div>
+          </div>
+          <a class="story-link" href="https://www.mdb.dev/about" target="_blank" rel="noopener">Learn about MDB <span>→</span></a>
+        </article>
+        <article class="story-panel" data-story-panel="1">
+          <span class="story-kicker">02</span>
+          <h2>Our Community</h2>
+          <p>At MDB, we prioritize and cultivate a diverse and welcoming community. Through team bonding activities, retreats, and club socials, our members form lasting bonds and unforgettable memories that enhance the college experience.</p>
+          <h3 class="community-mini-title">We are <span id="communityTypewriter"></span><span class="community-caret">|</span></h3>
+          <div class="story-photo-gallery">
+            <div class="story-photo-viewport"><div class="story-photo-track" id="storyCommunityPhotos1"></div></div>
+            <div class="story-photo-viewport"><div class="story-photo-track reverse" id="storyCommunityPhotos2"></div></div>
+            <div class="story-photo-viewport"><div class="story-photo-track" id="storyCommunityPhotos3"></div></div>
+          </div>
+          <a class="story-link" href="https://www.mdb.dev/contact" target="_blank" rel="noopener">Connect with our community <span>→</span></a>
+        </article>
+        <article class="story-panel" data-story-panel="2">
+          <span class="story-kicker">03</span>
+          <h2>Our Destinations</h2>
+          <p>At MDB, our members and alumni have a track record of success, moving on to positions in leading companies and innovative startups. Here’s a glimpse of the companies where our members make an impact.</p>
+          <div class="story-logo-grid" id="storyLogoGrid"></div>
+          <a class="story-link" href="https://www.mdb.dev/projects" target="_blank" rel="noopener">Explore our projects <span>→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="vendor/liquid-glass/container.js"></script>
+<script src="vendor/liquid-glass/button.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
